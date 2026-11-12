@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport - Интернет-магазин спортивных товаров</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div><i class="bi bi-geo-alt-fill me-1"></i> Омск</div>
+            <div><a href="tel:+79999999999"><i class="bi bi-telephone-fill me-1"></i> +7 (999) 99-99</a></div>
+        </div>
+    </div>
+
+    <header class="header-main sticky-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="#top" class="d-flex align-items-center text-decoration-none">
+                <!-- ВСТАВЬТЕ СВОЁ ФОТО (ЛОГОТИП) ЗДЕСЬ -->
+                <img src="https://via.placeholder.com/150x60/ffffff/0066cc?text=SPORT+LOGO" alt="Sport Logo" class="logo-img">
+            </a>
+            
+            <nav class="d-none d-lg-block">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#top">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#catalog">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons d-flex align-items-center">
+                <button data-bs-toggle="modal" data-bs-target="#authModal" title="Войти">
+                    <i class="bi bi-person"></i>
+                </button>
+                <button data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="Корзина">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-badge bg-danger text-white">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="filter-bar">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div class="d-flex flex-wrap gap-2">
+                <input type="radio" class="btn-check" name="filterOptions" id="filter1" autocomplete="off" checked>
+                <label class="filter-btn" for="filter1">Товары для вас</label>
+
+                <input type="radio" class="btn-check" name="filterOptions" id="filter2" autocomplete="off">
+                <label class="filter-btn" for="filter2">Новинки</label>
+
+                <input type="radio" class="btn-check" name="filterOptions" id="filter3" autocomplete="off">
+                <label class="filter-btn" for="filter3">Скидки</label>
+            </div>
+            <div class="search-box">
+                <input type="text" class="form-control" placeholder="Поиск товаров..." style="border-radius: 20px; width: 250px;">
+            </div>
+        </div>
+    </div>
+
+    <main class="container flex-grow-1">
+        
+        <div class="hero-banner text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-5 fw-bold mb-3">Спорт начинается здесь</h1>
+                    <p class="fs-5 mb-4">Скидки до 30% на тренажеры и спортивную экипировку. Успейте подготовиться к сезону!</p>
+                    <a href="#catalog" class="btn btn-light btn-lg px-4 fw-bold text-primary">Смотреть акции</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mb-4 fw-bold fs-3" id="catalog">Популярные товары</h2>
+        
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="card-product h-100">
+                    <div class="card-img-wrapper">
+                        <!-- ВСТАВЬТЕ СВОЁ ФОТО (ТОВАР 1 - БЕГОВАЯ ДОРОЖКА) ЗДЕСЬ -->
+                        <img src="https://via.placeholder.com/300x300/f8f9fa/cccccc?text=Тренажер" alt="Тренажер">
+                    </div>
+                    <div class="card-body-custom">
+                        <a href="#" class="product-title">Беговая дорожка SportPro X1</a>
+                        <div class="product-category">Кардиотренажеры</div>
+                    </div>
+                    <div class="price-action-row mt-auto">
+                        <span class="price-tag">25990 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                        <button class="btn-buy" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">В корзину</button>
+                    </div>
+                    <div class="reviews-row">
+                        <span><i class="bi bi-star-fill"></i> 5.0</span>
+                        <span>124 отзыва</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="card-product h-100">
+                    <div class="card-img-wrapper">
+                        <!-- ВСТАВЬТЕ СВОЁ ФОТО (ТОВАР 2 - КРОССОВКИ) ЗДЕСЬ -->
+                        <img src="https://via.placeholder.com/300x300/f8f9fa/cccccc?text=Кроссовки" alt="Кроссовки">
+                    </div>
+                    <div class="card-body-custom">
+                        <a href="#" class="product-title">Кроссовки для бега RunFast</a>
+                        <div class="product-category">Обувь</div>
+                    </div>
+                    <div class="price-action-row mt-auto">
+                        <span class="price-tag">4500 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                        <button class="btn-buy" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">В корзину</button>
+                    </div>
+                    <div class="reviews-row">
+                        <span><i class="bi bi-star-fill"></i> 4.8</span>
+                        <span>89 отзывов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="card-product h-100">
+                    <div class="card-img-wrapper">
+                        <!-- ВСТАВЬТЕ СВОЁ ФОТО (ТОВАР 3 - ГАНТЕЛИ) ЗДЕСЬ -->
+                        <img src="https://via.placeholder.com/300x300/f8f9fa/cccccc?text=Гантели" alt="Гантели">
+                    </div>
+                    <div class="card-body-custom">
+                        <a href="#" class="product-title">Гантели разборные 2x10 кг</a>
+                        <div class="product-category">Фитнес</div>
+                    </div>
+                    <div class="price-action-row mt-auto">
+                        <span class="price-tag">3200 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                        <button class="btn-buy" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">В корзину</button>
+                    </div>
+                    <div class="reviews-row">
+                        <span><i class="bi bi-star-fill"></i> 5.0</span>
+                        <span>45 отзывов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="card-product h-100">
+                    <div class="card-img-wrapper">
+                        <!-- ВСТАВЬТЕ СВОЁ ФОТО (ТОВАР 4 - НОСКИ) ЗДЕСЬ -->
+                        <img src="https://via.placeholder.com/300x300/f8f9fa/cccccc?text=Носки" alt="Носки">
+                    </div>
+                    <div class="card-body-custom">
+                        <a href="#" class="product-title">Носки спортивные (3 пары)</a>
+                        <div class="product-category">Аксессуары</div>
+                    </div>
+                    <div class="price-action-row mt-auto">
+                        <span class="price-tag">990 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                        <button class="btn-buy" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">В корзину</button>
+                    </div>
+                    <div class="reviews-row">
+                        <span><i class="bi bi-star-fill"></i> 5.0</span>
+                        <span>210 отзывов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="card-product h-100">
+                    <div class="card-img-wrapper">
+                        <!-- ВСТАВЬТЕ СВОЁ ФОТО (ТОВАР 5 - ПАЛАТКА) ЗДЕСЬ -->
+                        <img src="https://via.placeholder.com/300x300/f8f9fa/cccccc?text=Палатка" alt="Палатка">
+                    </div>
+                    <div class="card-body-custom">
+                        <a href="#" class="product-title">Палатка туристическая 3-местная</a>
+                        <div class="product-category">Туризм</div>
+                    </div>
+                    <div class="price-action-row mt-auto">
+                        <span class="price-tag">7800 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                        <button class="btn-buy" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">В корзину</button>
+                    </div>
+                    <div class="reviews-row">
+                        <span><i class="bi bi-star-fill"></i> 4.9</span>
+                        <span>67 отзывов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="card-product h-100">
+                    <div class="card-img-wrapper">
+                        <!-- ВСТАВЬТЕ СВОЁ ФОТО (ТОВАР 6 - КОВРИК) ЗДЕСЬ -->
+                        <img src="https://via.placeholder.com/300x300/f8f9fa/cccccc?text=Коврик" alt="Коврик">
+                    </div>
+                    <div class="card-body-custom">
+                        <a href="#" class="product-title">Коврик для йоги и фитнеса 6мм</a>
+                        <div class="product-category">Фитнес</div>
+                    </div>
+                    <div class="price-action-row mt-auto">
+                        <span class="price-tag">1200 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                        <button class="btn-buy" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">В корзину</button>
+                    </div>
+                    <div class="reviews-row">
+                        <span><i class="bi bi-star-fill"></i> 4.7</span>
+                        <span>134 отзыва</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="card-product h-100">
+                    <div class="card-img-wrapper">
+                        <!-- ВСТАВЬТЕ СВОЁ ФОТО (ТОВАР 7 - ВЕЛОТРЕНАЖЕР) ЗДЕСЬ -->
+                        <img src="https://via.placeholder.com/300x300/f8f9fa/cccccc?text=Велотренажер" alt="Велотренажер">
+                    </div>
+                    <div class="card-body-custom">
+                        <a href="#" class="product-title">Велотренажер магнитный CityBike</a>
+                        <div class="product-category">Кардиотренажеры</div>
+                    </div>
+                    <div class="price-action-row mt-auto">
+                        <span class="price-tag">18500 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                        <button class="btn-buy" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">В корзину</button>
+                    </div>
+                    <div class="reviews-row">
+                        <span><i class="bi bi-star-fill"></i> 4.6</span>
+                        <span>32 отзыва</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="card-product h-100">
+                    <div class="card-img-wrapper">
+                        <!-- ВСТАВЬТЕ СВОЁ ФОТО (ТОВАР 8 - БУТЫЛКА) ЗДЕСЬ -->
+                        <img src="https://via.placeholder.com/300x300/f8f9fa/cccccc?text=Бутылка" alt="Бутылка">
+                    </div>
+                    <div class="card-body-custom">
+                        <a href="#" class="product-title">Бутылка для воды спортивная 1л</a>
+                        <div class="product-category">Аксессуары</div>
+                    </div>
+                    <div class="price-action-row mt-auto">
+                        <span class="price-tag">650 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                        <button class="btn-buy" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">В корзину</button>
+                    </div>
+                    <div class="reviews-row">
+                        <span><i class="bi bi-star-fill"></i> 4.5</span>
+                        <span>78 отзывов</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="trust-block" id="about">
+            <h3 class="text-center mb-4 fw-bold">Почему выбирают Sport?</h3>
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <i class="bi bi-star-half trust-icon"></i>
+                    <h5 class="fw-bold">Высокий рейтинг</h5>
+                    <p class="text-muted">Средняя оценка 4.9 из 5 на основе тысяч реальных отзывов наших клиентов.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-truck trust-icon"></i>
+                    <h5 class="fw-bold">Быстрая доставка</h5>
+                    <p class="text-muted">Доставим крупногабаритный инвентарь по городу в день заказа или на следующий день.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-shield-check trust-icon"></i>
+                    <h5 class="fw-bold">Официальная гарантия</h5>
+                    <p class="text-muted">Предоставляем гарантию от производителя на все тренажеры и спортивную экипировку.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Контакты</h5>
+                    <a href="tel:+79999999999"><i class="bi bi-telephone me-2"></i> +7(999)-99-99</a>
+                    <a href="#"><i class="bi bi-geo-alt me-2"></i> Ул. Комарова 5/2</a>
+                    <a href="mailto:info@sport.ru"><i class="bi bi-envelope me-2"></i> info@sport.ru</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Покупателям</h5>
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">Гарантия и возврат</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="col-lg-4 col-md-12 text-lg-end text-md-start">
+                    <!-- ВСТАВЬТЕ СВОЁ ФОТО (ЛОГОТИП В ПОДВАЛЕ) ЗДЕСЬ -->
+                    <img src="https://via.placeholder.com/150x60/2b3035/ffffff?text=SPORT+LOGO" alt="Sport Logo" style="max-height: 50px; opacity: 0.8; margin-bottom: 15px;">
+                    <p class="small text-muted">Спортивные товары для настоящих побед. Тренажеры, экипировка, туризм.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Интернет-магазин Sport. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Вход в личный кабинет</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required placeholder="example@mail.ru">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Пароль</label>
+                            <input type="password" class="form-control" required placeholder="******">
+                        </div>
+                        <button type="button" class="btn btn-primary w-100 fw-bold" data-bs-dismiss="modal">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Оформление заказа</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Адрес доставки</label>
+                            <input type="text" class="form-control" required placeholder="Город, улица, дом">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Номер карты</label>
+                            <input type="text" class="form-control" required placeholder="0000 0000 0000 0000">
+                        </div>
+                        <button type="button" class="btn btn-success w-100 fw-bold" data-bs-dismiss="modal">Оплатить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">Ваша корзина</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div class="flex-grow-1">
+                <div class="cart-item">
+                    <img src="https://via.placeholder.com/60x60/f8f9fa/cccccc?text=Товар" alt="Товар" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Беговая дорожка SportPro X1</div>
+                        <div class="cart-item-price">25990 ₽ x 1</div>
+                    </div>
+                    <button class="btn-remove"><i class="bi bi-trash"></i></button>
+                </div>
+                <div class="cart-item">
+                    <img src="https://via.placeholder.com/60x60/f8f9fa/cccccc?text=Товар" alt="Товар" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Кроссовки для бега RunFast</div>
+                        <div class="cart-item-price">4500 ₽ x 1</div>
+                    </div>
+                    <button class="btn-remove"><i class="bi bi-trash"></i></button>
+                </div>
+            </div>
+            
+            <div class="border-top pt-3 mt-3">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="fw-bold fs-5">Итого:</span>
+                    <span class="fw-bold fs-5">30490 <i class="bi bi-currency-ruble" style="font-size: 14px;"></i></span>
+                </div>
+                <button class="btn btn-primary w-100 fw-bold py-2" data-bs-toggle="modal" data-bs-target="#checkoutModal">Перейти к оформлению</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
